@@ -8,5 +8,9 @@ mergedISBN = pd.merge(bookData, ratingsData, how='inner', left_on='ISBN', right_
 mergedUser = pd.merge(mergedISBN, usersData, how='inner', left_on='User-ID', right_on='User-ID')
 
 mergedUser.to_csv('mergedData.csv', sep='\t')
+columnsDrop = ['Image-URL-S', 'Image-URL-M', 'Image-URL-L']
+merged = mergedUser.drop(columns=columnsDrop, axis=1)
+merged = merged.dropna(axis=1, how='any')
+merged.to_csv('totalData.csv', sep='\t')
 
-print(mergedUser.columns)
+print(merged.head())
