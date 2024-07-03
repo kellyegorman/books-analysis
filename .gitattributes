@@ -3,3 +3,4 @@ Ratings.csv filter=lfs diff=lfs merge=lfs -text
 Books.csv filter=lfs diff=lfs merge=lfs -text
 *.csv filter=lfs diff=lfs merge=lfs -text
 mergedData.csv filter=lfs diff=lfs merge=lfs -text
+totalData.csv filter=lfs diff=lfs merge=lfs -text
